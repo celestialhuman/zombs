@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+
+
+<head>
+	 <title>
+   geovani's zombs royale
+  </title>
+
+</head>
+
+  <body>
+  <button class="c-button">PLAY FULLSCREEN</button>
+<style>
+.c-button {
+  min-width: 100%;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4682B4;
+  color: #fff;
+  padding: 0px 46px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.c-button:hover {
+  background: #B0C4DE;
+}
+
+.c-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+  
+ .c-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+</style>
+<script>
+        var urlObj = new window.URL(window.location.href);
+        var url = "https://tal2tot4uenli8d3lphbjvrrl237cfes-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=http://hosting.gmodules.com/ig/gadgets/file/106581606564100174314/iframe.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=e84bb413bac0ac08&libs=core:dynamic-height&mid=254&parent=https://sites.google.com/site/tyronesgameshack/zombs-royale#up_scroll=auto&up_iframeURL=https://zombsroyale.io/&st=e%3DAIHE3cAeWKXjWJlVn0wZcfZkoYKj%252B2QMacFY37UY%252FTd68XXKFAsyXbRuboUgq9ic0RT8Ek5klQ%252BsC1Wb%252B%252FbWwdELntlOHLRjBk3hW1%252BEqCRDTD9wwtASxQWiAGGOc7e3LXw11ZUpaSBY%26c%3Denterprise&rpctoken=4815077873573478475";
+
+        if (url) {
+            var win;
+
+            document.querySelector('button').onclick = function() {
+                if (win) {
+                    win.focus();
+                } else {
+                    win = window.open();
+                    win.document.body.style.margin = '0';
+                    win.document.body.style.height = '100vh';
+                    var iframe = win.document.createElement('iframe');
+                    iframe.style.border = 'none';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    iframe.style.margin = '0';
+                    iframe.src = url;
+                    win.document.body.appendChild(iframe);
+                    
+
+                    var interval = setInterval(function() {
+                        if (win.closed) {
+                            clearInterval(interval);
+                            win = undefined;
+
+                        }
+                    }, 500);
+
+
+                }
+            };
+        }
+    </script>
+
+</body>
+</html>
